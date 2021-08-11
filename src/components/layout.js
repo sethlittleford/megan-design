@@ -1,5 +1,12 @@
-import * as React from "react"
+/**
+ * This Layout component is used for things shared
+ * throughout the site such as the header, footer,
+ * and global styles.
+ */
+
+import React from "react"
 import PropTypes from "prop-types"
+import "./layout.css"
 
 
 const Layout = ({ children }) => {
