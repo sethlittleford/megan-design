@@ -7,6 +7,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
+import "normalize.css" // for broswer rendering consistency
 
 
 const Layout = ({ children }) => {
