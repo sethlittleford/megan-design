@@ -1,5 +1,19 @@
 /* Define global styles here */
 
-/* Is the layout.css in the gatsby-starter-default a browser normalization? */
+/* Cherry pick css from default starter layout.css */
 
 /* https://github.com/gatsbyjs/gatsby-starter-default/blob/master/src/components/layout.css */
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* font: 112.5%/1.45em georgia, serif, sans-serif; */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* font-family: georgia, serif; */
+}
