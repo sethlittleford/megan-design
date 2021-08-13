@@ -1,4 +1,15 @@
 .header {
     height: 80px;
-    background: rosybrown;
+    background: var(--gray-transparent);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(4px);
+}
+
+.content {
+    margin: 0 auto;
+    max-width: var(--content-max-width);
+    height: 100%;
 }

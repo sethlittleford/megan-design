@@ -1,11 +1,12 @@
 import React from 'react'
-import { header } from './header.module.css'
+import * as styles from './header.module.css'
 
 export default function Header() {
-  console.log(header)
   return (
-    <header className={header}>
-      Seth
+    <header className={styles.header}>
+      <div className={styles.content}>
+        Image Gallery Collaborations About Me Contact
+      </div>
     </header>
   )
 }
