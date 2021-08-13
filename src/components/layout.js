@@ -6,6 +6,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Header from "./header"
 import "./layout.css"
 import "normalize.css" // for broswer rendering consistency
 
@@ -13,7 +14,7 @@ import "normalize.css" // for broswer rendering consistency
 const Layout = ({ children }) => {
   return (
     <>
-      <div>Header</div>
+      <Header />
       <div
         style={{
           margin: `0 auto`,
