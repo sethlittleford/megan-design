@@ -10,6 +10,7 @@ import Header from "./header"
 import "./layout.css"
 import * as styles from './layout.module.css'
 import "normalize.css" // for broswer rendering consistency
+import "@fontsource/roboto/300.css" // Weight: 300, Style: normal
 
 
 const Layout = ({ children }) => {
