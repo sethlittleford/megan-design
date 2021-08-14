@@ -17,10 +17,10 @@ export default function Header() {
           />
         </Link>
         <div className={styles.mobileMenu}>
-          <Link to="/">Gallery</Link>
-          <Link to="/">Collaborations</Link>
-          <Link to="/">About Me</Link>
-          <Link to="/">Contact</Link>
+          <Link to="/" activeClassName={styles.activeLink}>Gallery</Link>
+          <Link to="/" activeClassName={styles.activeLink}>Collaborations</Link>
+          <Link to="/" activeClassName={styles.activeLink}>About Me</Link>
+          <Link to="/" activeClassName={styles.activeLink}>Contact</Link>
         </div>
       </nav>
     </header>

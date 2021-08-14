@@ -20,4 +20,14 @@
 
 .mobileMenu a {
     margin-left: 30px;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.activeLink {
+    text-decoration: underline !important;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px !important;
 }
