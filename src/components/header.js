@@ -16,7 +16,7 @@ export default function Header() {
             height={62}
           />
         </Link>
-        <div> {/* This will be the open menu container */}
+        <div className={styles.mobileMenu}>
           <Link to="/">Gallery</Link>
           <Link to="/">Collaborations</Link>
           <Link to="/">About Me</Link>
