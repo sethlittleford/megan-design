@@ -2,6 +2,7 @@ import React from 'react'
 import * as styles from './header.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import Hamburger from '../svg/hamburger.svg';
 
 export default function Header() {
   return (
@@ -22,7 +23,9 @@ export default function Header() {
           <Link to="/" activeClassName={styles.activeLink}>About Me</Link>
           <Link to="/" activeClassName={styles.activeLink}>Contact</Link>
         </div>
-        <button className={styles.hamburger}>Click me</button>
+        <button className={styles.hamburger}>
+          <Hamburger />
+        </button>
       </nav>
     </header>
   )
