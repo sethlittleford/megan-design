@@ -6,6 +6,7 @@
     top: 0;
     width: 100%;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .content {
@@ -37,4 +38,41 @@
     text-decoration: underline !important;
     text-underline-offset: 7px;
     text-decoration-thickness: 1px !important;
+}
+
+.hamburger {
+    display: none; /* hide hamburger button unless on mobile */
+}
+
+@media (max-width: 1150px) {
+    .hamburger {
+        /* toggle button still on top */
+        z-index: 1;
+        display: initial;
+    }
+    .mobileMenu {
+        /* make mobile menu cover the screen */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        
+        /* style the mobile menu */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+        background: var(--gray-transparent);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        z-index: 0;
+    }
+
+    .mobileMenu a {
+        font-size: 36px;
+        text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    }
 }
