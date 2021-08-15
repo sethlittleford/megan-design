@@ -1,8 +1,8 @@
-import React from "react"
-import Gallery from './gallery'
+import React from 'react'
+import Layout from '../components/layout'
 
 const IndexPage = () => {
-  return <Gallery></Gallery>
+  return <Layout><div>This is the home page Gallery.</div></Layout>
 }
 
 export default IndexPage
