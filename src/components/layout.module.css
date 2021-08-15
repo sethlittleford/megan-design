@@ -1,4 +1,5 @@
 .main {
-    margin: 0 auto;
+    margin: var(--header-height) auto;
     max-width: var(--content-max-width);
+    padding: var(--content-padding);
 }

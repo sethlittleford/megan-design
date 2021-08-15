@@ -3,6 +3,7 @@
 :root {
     --content-max-width: 1440px;
     --content-padding: 24px;
+    --header-height: 80px;
     --font-family: "Roboto", georgia, serif;
     --background-gray: #F3F3F3;
     --gray-transparent: rgba(255, 255, 255, 0.6);

@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    height: var(--header-height);
     background: var(--gray-transparent);
     position: fixed;
     z-index: 100;
