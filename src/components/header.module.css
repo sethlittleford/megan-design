@@ -86,6 +86,16 @@
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         z-index: 0;
+
+        /* closed menu state */
+        opacity: 0;
+        transform: translateX(100%); /* move out of view */
+        transition: transform 0.2s, opacity 0.2s; /* need a one-way here? */
+    }
+
+    .openMenu {
+        opacity: 1;
+        transform: translateX(0); /* move into view */
     }
 
     .mobileMenu a {
@@ -97,6 +107,10 @@
     /* Hide the logo */
     .content > a {
         display: none;
+    }
+
+    .header {
+        background: none;
     }
 
     /* Keep the hamburger button to the right */
