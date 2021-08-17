@@ -23,9 +23,10 @@ export default function Header() {
           <Link to="/" activeClassName={styles.activeLink}>About Me</Link>
           <Link to="/" activeClassName={styles.activeLink}>Contact</Link>
         </div>
-        <Hamburger />
         <button className={styles.hamburger}>
-          <Hamburger />
+          <div className={styles.circle}>
+            <Hamburger />
+          </div>
         </button>
       </nav>
     </header>
