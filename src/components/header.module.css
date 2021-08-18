@@ -89,6 +89,7 @@
 
         /* closed menu state */
         transform: translateX(100%); /* move out of view */
+        transition: transform 200ms;
     }
 
     .openMenu {
@@ -106,22 +107,22 @@
 
     .openMenu a:nth-child(1) {
         transform: translateX(0);
-        transition-delay: 0ms;
+        transition-delay: calc(200ms + 0ms);
     }
 
     .openMenu a:nth-child(2) {
         transform: translateX(0);
-        transition-delay: 50ms;
+        transition-delay: calc(200ms + 50ms);
     }
 
     .openMenu a:nth-child(3) {
         transform: translateX(0);
-        transition-delay: 150ms;
+        transition-delay: calc(200ms + 150ms);
     }
 
     .openMenu a:nth-child(4) {
         transform: translateX(0);
-        transition-delay: 200ms;
+        transition-delay: calc(200ms + 200ms);
     }
 
     /* Hide the logo */
