@@ -82,8 +82,7 @@
         align-items: flex-end;
         padding-left: var(--content-padding);
         padding-right: var(--content-padding);
-        /* background: var(--gray-transparent); */
-        background: gold;
+        background: var(--gray-transparent);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         z-index: 0;
