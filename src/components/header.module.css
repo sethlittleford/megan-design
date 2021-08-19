@@ -183,6 +183,62 @@
         align-items: center;
         justify-content: space-between;
     }
+    /* closed menu states */
+    .mobileMenu a:nth-child(1) {
+        /* 0-100ms */
+        transform: translateY(100vh); /* move out of view */
+        transition: transform 100ms;
+        transition-delay: 0ms;
+    }
+
+    .mobileMenu a:nth-child(2) {
+        /* 100-200ms */
+        transform: translateY(100vh); /* move out of view */
+        transition: transform 100ms;
+        transition-delay: 100ms;
+    }
+
+    .mobileMenu a:nth-child(3) {
+        /* 200-300ms */
+        transform: translateY(100vh); /* move out of view */
+        transition: transform 100ms;
+        transition-delay: 200ms;
+    }
+
+    .mobileMenu a:nth-child(4) {
+        /* 300-400ms */
+        transform: translateY(100vh); /* move out of view */
+        transition: transform 100ms;
+        transition-delay: 300ms;
+    }
+
+    .openMenu a:nth-child(1) {
+        /* 100-200ms */
+        transform: translateY(0);
+        transition: transform 100ms;
+        transition-delay: calc(100ms + 0ms);
+    }
+
+    .openMenu a:nth-child(2) {
+        /* 200-300ms */
+        transform: translateY(0);
+        transition: transform 100ms;
+        transition-delay: calc(100ms + 100ms);
+    }
+
+    .openMenu a:nth-child(3) {
+        /* 300-400ms */
+        transform: translateY(0);
+        transition: transform 100ms;
+        transition-delay: calc(100ms + 200ms);
+    }
+
+    .openMenu a:nth-child(4) {
+        /* 400-500ms */
+        transform: translateY(0);
+        transition: transform 100ms;
+        transition-delay: calc(100ms + 300ms);
+    }
 }
 
 /* Edge case where phone is more square (older) */
