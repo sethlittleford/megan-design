@@ -3,6 +3,7 @@ import * as styles from './header.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import Hamburger from '../svg/hamburger.svg';
+import "./header.css"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
