@@ -1,7 +1,12 @@
 import * as React from "react";
 import * as styles from './hamburger.module.css'
 
-function Hamburger({ clicked }) {
+function Hamburger({ touched, clicked }) {
+  if (!touched) {
+    // We don't want any animating classes on the paths
+  } else {
+    // We want either the open or closing animation class
+  }
   return (
     <svg
       viewBox="0 0 39 30"
@@ -10,21 +15,21 @@ function Hamburger({ clicked }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={`${styles.top}  ${clicked ? styles.clicked : ''}`}
+        className={`${clicked ? styles.open : styles.close}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}
         d="M 0,1.5 h 39"
       />
       <path
-        className={`${styles.middle}  ${clicked ? styles.clicked : ''}`}
+        className={`${clicked ? styles.open : styles.close}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}
         d="M 0,15 h 39"
       />
       <path
-        className={`${styles.bottom}  ${clicked ? styles.clicked : ''}`}
+        className={`${clicked ? styles.open : styles.close}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}

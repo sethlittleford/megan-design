@@ -6,7 +6,11 @@ import Hamburger from './hamburger'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const [touched, setTouched] = useState(false);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    setTouched(true);
+  }
   return (
     <header className={styles.header}>
       <nav className={styles.content}>
@@ -27,7 +31,7 @@ export default function Header() {
         </div>
         <button className={styles.hamburger} onClick={toggleMobileMenu}>
           <div className={styles.circle}>
-            <Hamburger clicked={mobileMenuOpen}/>
+            <Hamburger touched={touched} clicked={mobileMenuOpen}/>
           </div>
         </button>
       </nav>
