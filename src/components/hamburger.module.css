@@ -1,7 +1,44 @@
-.top {
-    stroke: gold;
+.top.clicked {
+    transform-origin: 50% 1.5px; /* with respect to vector */
+    animation: topAnimation 5000ms forwards;
 }
 
-.clicked {
-    stroke: purple;
+.middle.clicked {
+    transform-origin: 50% 15px; /* with respect to vector */
+    animation: middleAnimation 5000ms forwards;
+}
+
+.bottom.clicked {
+    transform-origin: 50% 28.5px; /* with respect to vector */
+    animation: bottomAnimation 5000ms forwards;
+}
+
+@keyframes topAnimation {
+    50% {
+        transform: translateY(13.5px) rotate(0);
+    }
+    100% {
+        transform: translateY(13.5px) rotate(135deg);
+    }
+}
+
+@keyframes middleAnimation {
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bottomAnimation {
+    50% {
+        transform: translateY(-13.5px) rotate(0);
+    }
+    100% {
+        transform: translateY(-13.5px) rotate(45deg);
+    }
 }

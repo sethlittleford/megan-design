@@ -6,32 +6,25 @@ function Hamburger({ clicked }) {
     <svg
       viewBox="0 0 39 30"
       width={39}
-      height={30}
+      height={39} //prevent cutoff vector on rotate
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={`${styles.top} ${clicked ? styles.clicked : ''}`}
+        className={`${styles.top}  ${clicked ? styles.clicked : ''}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}
         d="M 0,1.5 h 39"
       />
       <path
-        className="middle"
+        className={`${styles.middle}  ${clicked ? styles.clicked : ''}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}
         d="M 0,15 h 39"
       />
       <path
-        className="middle"
-        fill="none"
-        stroke="#000000"
-        strokeWidth={3}
-        d="M 0,15 h 39"
-      />
-      <path
-        className="bottom"
+        className={`${styles.bottom}  ${clicked ? styles.clicked : ''}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}
