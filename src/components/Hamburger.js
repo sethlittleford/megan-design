@@ -1,6 +1,7 @@
 import * as React from "react";
+import * as styles from './hamburger.module.css'
 
-function Hamburger() {
+function Hamburger({ clicked }) {
   return (
     <svg
       viewBox="0 0 39 30"
@@ -9,7 +10,7 @@ function Hamburger() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className="top"
+        className={`${styles.top} ${clicked ? styles.clicked : ''}`}
         fill="none"
         stroke="#000000"
         strokeWidth={3}

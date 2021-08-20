@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import * as styles from './header.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Hamburger from './Hamburger'
-import "./header.css"
+import Hamburger from './hamburger'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +27,7 @@ export default function Header() {
         </div>
         <button className={styles.hamburger} onClick={toggleMobileMenu}>
           <div className={styles.circle}>
-            <Hamburger />
+            <Hamburger clicked={mobileMenuOpen}/>
           </div>
         </button>
       </nav>
