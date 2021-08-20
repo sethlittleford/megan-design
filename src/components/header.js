@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import * as styles from './header.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Hamburger from '../svg/hamburger.svg';
+// import Hamburger from '../svg/hamburger.svg'; remove the react plugin for svg in favor of svgr script
+import Hamburger from './Hamburger'
 import "./header.css"
 
 export default function Header() {

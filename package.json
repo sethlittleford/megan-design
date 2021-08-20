@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "svg-to-jsx": "npx @svgr/cli < src/svg/hamburger.svg > src/components/Hamburger.js --expand-props 'none' --no-svgo"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.0",
@@ -26,5 +27,8 @@
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^5.5.0"
   }
 }
