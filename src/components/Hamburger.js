@@ -17,6 +17,8 @@ function Hamburger({ touched, clicked }) {
           cname += styles.middle; break;
         case 'bottom':
           cname += styles.bottom; break;
+        default:
+          cname = '';
       }
       return cname;
     }  
