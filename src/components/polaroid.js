@@ -2,6 +2,8 @@ import React from 'react'
 import * as styles from './polaroid.module.css'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
 
 
 const Polaroid = () => {
@@ -16,20 +18,44 @@ const Polaroid = () => {
   //     }
   //   }
   // `)
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: {eq: "Megan_Littleford_Design_Logo.png"}) {
-        childImageSharp {
-          gatsbyImageData(width: 293, height: 293, placeholder: BLURRED)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     file(relativePath: {eq: "Megan_Littleford_Design_Logo.png"}) {
+  //       childImageSharp {
+  //         gatsbyImageData(width: 293, height: 293, placeholder: BLURRED)
+  //       }
+  //     }
+  //   }
+  // `)
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "bluebirds.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
-    }
-  `)
-  console.log(data);
-  const image = getImage(data.file);
+    `
+  )
+  const image = getImage(placeholderImage);
+  const bgImage = convertToBgImage(image);
   return (
     <div className={styles.polaroid}>
-      <GatsbyImage image={image} alt="some alt description" />
+      {/* <GatsbyImage image={image} alt="some alt description" /> */}
+      <div className={styles.imageContainer}>
+        <BackgroundImage
+        Tag="section"
+        // Spread bgImage into BackgroundImage:
+        {...bgImage}
+        preserveStackingContext
+        >
+          <GatsbyImage image={image} alt={"testimage"}/>
+        </BackgroundImage>
+      </div>
     </div>
   );
 }
