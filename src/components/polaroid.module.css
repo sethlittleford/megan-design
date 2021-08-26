@@ -9,11 +9,21 @@
 }
 
 .imageContainer {
+    background: #FFFFFF;
+    position: absolute;
+    width: 293px;
+    height: 293px;
+    border-radius: 10px;
+}
+
+.imageShadow {
+    position: absolute;
+    width: 293px;
+    height: 293px;
     box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1), inset 4px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 .imageContainer img {
-    border-radius: 10px !important;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1), inset 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }

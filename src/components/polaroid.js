@@ -45,17 +45,15 @@ const Polaroid = () => {
   const bgImage = convertToBgImage(image);
   return (
     <div className={styles.polaroid}>
-      {/* <GatsbyImage image={image} alt="some alt description" /> */}
-      <div className={styles.imageContainer}>
-        <BackgroundImage
-        Tag="section"
-        // Spread bgImage into BackgroundImage:
-        {...bgImage}
-        preserveStackingContext
-        >
-          <GatsbyImage image={image} alt={"testimage"}/>
-        </BackgroundImage>
-      </div>
+      {/* <BackgroundImage
+      Tag="section"
+      // Spread bgImage into BackgroundImage:
+      {...bgImage}
+      preserveStackingContext
+      > */}
+        <div className={styles.imageShadow}></div>
+        <GatsbyImage image={image} alt={"testimage"}/>
+      {/* </BackgroundImage> */}
     </div>
   );
 }
