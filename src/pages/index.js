@@ -2,30 +2,34 @@ import React from 'react'
 import Layout from '../components/layout'
 import Polaroid from '../components/polaroid'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { getImage } from 'gatsby-plugin-image'
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div>This is the home page Gallery.</div>
-      {data.allImageSharp.edges.map(edge => {
-        let image = getImage(edge.node);
-        // return <GatsbyImage image={seth} alt={"testimage"}/> 
-        return <Polaroid image={image} />
+      {data.allFile.nodes.map(node => {
+        let image = getImage(node);
+        let alt = node.childImageSharp.parent.name;
+        return <Polaroid image={image} alt={alt} />
       })}
     </Layout>
   );
 }
 
-export const pageQuery = graphql`
+export const textilePatternImageQuery = graphql`
   query {
-    allImageSharp {
-      edges {
-        node {
+    allFile(filter: {relativeDirectory: {eq: "textile-patterns"}}) {
+      nodes {
+        childImageSharp {
           gatsbyImageData(
             placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
           )
+          parent {
+            ... on File {
+              name
+            }
+          }
         }
       }
     }

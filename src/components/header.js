@@ -19,7 +19,6 @@ export default function Header() {
             src="../images/Megan_Littleford_Design_Logo.png" 
             alt="Megan Littleford Design" 
             placeholder="blurred"
-            layout="fixed"
             height={62}
           />
         </Link>

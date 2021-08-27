@@ -1,9 +1,8 @@
 import React from 'react'
 import * as styles from './polaroid.module.css'
-import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Polaroid = ({ image }) => {
+const Polaroid = ({ image, alt }) => {
   // const { placeholderImage } = useStaticQuery(
   //   graphql`
   //     query {
@@ -21,7 +20,7 @@ const Polaroid = ({ image }) => {
   // const image = getImage(placeholderImage);
   return (
     <div className={styles.polaroid}>
-      <GatsbyImage image={image} alt={"testimage"} className={styles.imageWrapper}/>
+      <GatsbyImage image={image} alt={alt} className={styles.imageWrapper} imgClassName={styles.image}/>
     </div>
   );
 }
