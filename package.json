@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "svg-to-jsx": "npx @svgr/cli < src/svg/hamburger.svg > src/components/Hamburger.js --expand-props 'none' --no-svgo"
+    "svg-to-jsx-no-svgo": "npx @svgr/cli < src/svg/hamburger.svg > src/components/hamburger.js --expand-props 'none' --no-svgo",
+    "svg-to-jsx": "npx @svgr/cli < src/svg/bluebirds.svg > src/components/bluebirds.js --expand-props 'none' --svgo-config svgo-config.json"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.0",

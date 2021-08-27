@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Polaroid from '../components/polaroid'
 import { graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
+import Bluebirds from '../components/bluebirds'
 
 const IndexPage = ({ data }) => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
         let alt = node.childImageSharp.parent.name;
         return <Polaroid image={image} alt={alt} />
       })}
+      <Bluebirds />
     </Layout>
   );
 }

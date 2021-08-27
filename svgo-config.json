@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    {
+      "removeEditorsNSData": { "additionalNamespaces": ["http://vectornator.io"] }
+    }
+  ]
+}
