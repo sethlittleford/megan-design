@@ -2,9 +2,6 @@ import React from 'react'
 import * as styles from './polaroid.module.css'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { convertToBgImage } from "gbimage-bridge"
-import BackgroundImage from 'gatsby-background-image'
-
 
 const Polaroid = () => {
   // const data = useStaticQuery(graphql`
@@ -42,18 +39,11 @@ const Polaroid = () => {
     `
   )
   const image = getImage(placeholderImage);
-  const bgImage = convertToBgImage(image);
   return (
     <div className={styles.polaroid}>
-      {/* <BackgroundImage
-      Tag="section"
-      // Spread bgImage into BackgroundImage:
-      {...bgImage}
-      preserveStackingContext
-      > */}
-        <div className={styles.imageShadow}></div>
-        <GatsbyImage image={image} alt={"testimage"}/>
-      {/* </BackgroundImage> */}
+      <div className={styles.imageShadow}>
+        <GatsbyImage image={image} alt={"testimage"} className={styles.findMe}/>
+      </div>
     </div>
   );
 }
