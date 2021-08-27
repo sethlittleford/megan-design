@@ -41,9 +41,7 @@ const Polaroid = () => {
   const image = getImage(placeholderImage);
   return (
     <div className={styles.polaroid}>
-      <div className={styles.imageShadow}>
-        <GatsbyImage image={image} alt={"testimage"} className={styles.findMe}/>
-      </div>
+      <GatsbyImage image={image} alt={"testimage"} className={styles.imageWrapper}/>
     </div>
   );
 }
