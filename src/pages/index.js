@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Polaroid from '../components/polaroid'
 import { graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import Bluebirds from '../components/bluebirds'
+import { mapImageToSVG } from '../components/handwritten-svgs/map-image-to-svg'
 
 const IndexPage = ({ data }) => {
   return (
@@ -12,9 +12,9 @@ const IndexPage = ({ data }) => {
       {data.allFile.nodes.map(node => {
         let image = getImage(node);
         let alt = node.childImageSharp.parent.name;
-        return <Polaroid image={image} alt={alt} />
+        let SVGComponent = mapImageToSVG.get(alt);
+        return <Polaroid image={image} alt={alt}>{SVGComponent}</Polaroid>
       })}
-      <Bluebirds />
     </Layout>
   );
 }
