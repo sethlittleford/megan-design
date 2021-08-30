@@ -1,5 +1,5 @@
 .polaroid {
-    width: 327px;
+    width: var(--polaroid-width);
     height: 400px;
     background: #FFFFFF;
     border-radius: 10px;
