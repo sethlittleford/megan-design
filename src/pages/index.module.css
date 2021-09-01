@@ -1,9 +1,13 @@
 .grid {
     background: aqua;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    row-gap: 10%;
+    grid-template-columns: repeat(3, var(--polaroid-width));
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* justify-items: center; */
+    /* row-gap: calc(20px + 5%); */
+    gap: calc((var(--content-max-width) - 3 * var(--polaroid-width)) / 4);
+    padding: calc((var(--content-max-width) - 3 * var(--polaroid-width)) / 4);
+    /* max-width: 500px; */
 }
 
 .fakePolaroid {
