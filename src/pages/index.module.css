@@ -2,7 +2,7 @@
     font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: 0.4em;
     text-align: center;
 }
 
@@ -15,7 +15,11 @@
     transform: translateY(-1rem);
 }
 
-/* @medai (min-width: ) */
+@media (min-width: 654px) and (max-width: 930px) {
+    .h1 {
+        padding: 0 20%;
+    }
+}
 
 .grid {
     display: grid;
