@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as styles from './header.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Hamburger from './hamburger-svg'
+import Hamburger from './hamburger'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
