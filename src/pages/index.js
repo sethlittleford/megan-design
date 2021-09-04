@@ -17,10 +17,6 @@ const IndexPage = ({ data }) => {
           let SVGComponent = mapImageToSVG.get(alt);
           return <Polaroid image={image} alt={alt}>{SVGComponent}</Polaroid>
         })}
-        <div className={styles.fakePolaroid}>polaroid</div>
-        <div className={styles.fakePolaroid}>polaroid</div>
-        <div className={styles.fakePolaroid}>polaroid</div>
-        <div className={styles.fakePolaroid}>polaroid</div>
       </div>
     </Layout>
   );
