@@ -9,7 +9,7 @@ import * as styles from './index.module.css'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <div>This is the home page Gallery.</div>
+      <h1 className={styles.h1}>Gallery</h1>
       <div className={styles.grid}>
         {data.allFile.nodes.map(node => {
           let image = getImage(node);

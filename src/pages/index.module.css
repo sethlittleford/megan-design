@@ -1,3 +1,22 @@
+.h1 {
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+
+.h1::before, .h1::after {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid #000000;
+    width: 13rem;
+    margin: 0 2rem;
+    transform: translateY(-1rem);
+}
+
+/* @medai (min-width: ) */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
