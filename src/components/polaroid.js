@@ -14,4 +14,24 @@ const Polaroid = ({ image, alt, children }) => {
   );
 }
 
+// export const gatsbyPathQuery = graphql`
+//   query {
+//     allFile(filter: {relativeDirectory: {eq: "textile-patterns"}}) {
+//       nodes {
+//         childImageSharp {
+//           gatsbyImageData(
+//             placeholder: BLURRED
+//           )
+//           parent {
+//             ... on File {
+//               name
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
+
 export default Polaroid;
