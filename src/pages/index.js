@@ -12,10 +12,12 @@ const IndexPage = ({ data }) => {
       <h1 className={styles.h1}>Gallery</h1>
       <div className={styles.grid}>
         {data.allFile.nodes.map(node => {
+          let key = node.childImageSharp.parent.id;
           let image = getImage(node);
           let alt = node.childImageSharp.parent.name;
+          let path = node.childImageSharp.gatsbyPath;
           let SVGComponent = mapImageToSVG.get(alt);
-          return <Polaroid image={image} alt={alt}>{SVGComponent}</Polaroid>
+          return <Polaroid key={key} image={image} alt={alt} path={path}>{SVGComponent}</Polaroid>
         })}
       </div>
     </Layout>
@@ -30,8 +32,10 @@ export const textilePatternImageQuery = graphql`
           gatsbyImageData(
             placeholder: BLURRED
           )
+          gatsbyPath(filePath: "/{ImageSharp.parent__(File)__name}")
           parent {
             ... on File {
+              id
               name
             }
           }
