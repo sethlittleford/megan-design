@@ -169,6 +169,10 @@
 
     .header {
         background: none;
+        border-bottom: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    
     }
 
     /* Keep the hamburger button to the right */
